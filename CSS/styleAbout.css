@@ -1,0 +1,338 @@
+body.page-about #navbar {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.about-me,
+.skills,
+.contact {
+  margin: var(--space-17) var(--space-15); /* era "120px 80px" — mesmo valor */
+}
+.about-me__content {
+  gap: var(--space-15); /* era "5rem" (80px) — mesmo valor, agora token */
+}
+.glass-card {
+  padding: var(--space-11); /* era "1.75rem" (28px) — mesmo valor */
+  background: var(--card-background);
+  border: 1px solid var(--overlay-white-08);
+  border-radius: 1.75rem;
+}
+.glass-card p {
+  margin: 0;
+  color: var(--overlay-white-50);
+  font-size: var(--fs-m);
+  line-height: var(--leading-relaxed); /* era "1.66" — mesmo valor */
+  padding-bottom: var(--space-2); /* era "8px" — mesmo valor, agora token */
+}
+.glass-card a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.glass-card a:hover,
+.glass-card a:focus-visible {
+  color: var(--pink);
+}
+.about-me__photo {
+  flex: 0 0 auto;
+  width: clamp(10rem, 24.5vw, 22rem);
+  aspect-ratio: 351 / 550;
+}
+.about-me__photo-img {
+  height: 100%;
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+.about-me__photo-img--no-helmet {
+  opacity: 0;
+  transform: scale(0.97);
+}
+.about-me__photo.is-revealed .about-me__photo-img--helmet {
+  opacity: 0;
+  transform: scale(0.97);
+}
+.about-me__photo.is-revealed .about-me__photo-img--no-helmet {
+  opacity: 1;
+  transform: scale(1);
+}
+.about-me__message {
+  left: 80%;
+  top: 80%;
+  width: 40%;
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+.about-me__photo.is-open .about-me__message {
+  opacity: 1;
+  transform: scale(1);
+}
+.about-me__message-arrow {
+  flex-shrink: 0;
+  width: 1.75rem;
+  transform: rotate(150deg);
+  opacity: 55%;
+}
+.about-me__message-text {
+  width: 7.0625rem;
+  font-family: var(--font-family-handwritten);
+  font-size: var(--fs-2xl);
+  line-height: var(--leading-snug); /* era "1.36" — mesmo valor */
+  color: var(--gold);
+  opacity: 55%;
+}
+.skills h3 {
+  font-size: var(--fs-3xl);
+  margin-top: 0;
+}
+.skills > .section-heading {
+  text-align: center;
+}
+.cards-row {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6); /* era "1.25rem" (20px) — mesmo valor, agora token */
+}
+.tech-card {
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  animation: card-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.tech-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.tech-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.tech-card:nth-child(3) {
+  animation-delay: 0.35s;
+}
+.tech-card:nth-child(4) {
+  animation-delay: 0.45s;
+}
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tech-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s;
+  border-radius: inherit;
+}
+.tc-ux::before {
+  background: radial-gradient(
+    circle at 0% 0%,
+    color-mix(in srgb, var(--cyan), transparent 82%),
+    transparent 65%
+  );
+}
+.tc-ui::before {
+  background: radial-gradient(
+    circle at 0% 0%,
+    color-mix(in srgb, var(--purple), transparent 82%),
+    transparent 65%
+  );
+}
+.tc-motion::before {
+  background: radial-gradient(
+    circle at 0% 0%,
+    color-mix(in srgb, var(--blue), transparent 82%),
+    transparent 65%
+  );
+}
+.tc-dev::before {
+  background: radial-gradient(
+    circle at 0% 0%,
+    color-mix(in srgb, var(--magenta), transparent 82%),
+    transparent 65%
+  );
+}
+.tech-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--overlay-white-15);
+  background: var(--overlay-white-08);
+  box-shadow: 0 10px 30px rgba(48, 48, 48, 0.155);
+}
+.tech-card:hover::before {
+  opacity: 1;
+}
+.tc-icon {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-9); /* era "1rem" (16px) — mesmo valor */
+  width: 10%;
+  display: inline-block;
+  animation: spin-slow 8s linear infinite;
+  color: var(--overlay-white-50);
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.tech-card h3 {
+  font-size: var(--fs-xl);
+  margin-bottom: 0.8rem;
+  color: var(--overlay-white-50);
+}
+.tech-card-content {
+  padding-bottom: var(--space-6);
+}
+.tech-card p {
+  font-size: var(--fs-sm);
+  color: var(--overlay-white-50);
+  font-family: var(--font-family-detail);
+}
+.tc-progress {
+  margin-top: auto;
+  height: 3px;
+  background: var(--overlay-white-08);
+}
+.tc-bar {
+  height: 100%;
+  border-radius: var(
+    --radius-pill
+  ); /* era "100px" — mesmo valor, agora token */
+  animation: bar-fill 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+@keyframes bar-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--w);
+  }
+}
+.tc-ux .tc-bar {
+  background: var(--gradient-ux);
+}
+.tc-ui .tc-bar {
+  background: var(--gradient-ui);
+}
+.tc-motion .tc-bar {
+  background: var(--gradient-motion);
+}
+.tc-dev .tc-bar {
+  background: var(--gradient-dev);
+}
+.marquee-section {
+  margin-top: var(--space-16); /* era "100px" — mesmo valor, agora token */
+  padding: var(--space-13) 0; /* era "2.5rem" (40px) — mesmo valor */
+  border-top: 1px solid var(--overlay-white-08);
+  border-bottom: 1px solid var(--overlay-white-08);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+.marquee-content {
+  white-space: nowrap;
+  animation: marquee 38s linear infinite;
+}
+.marquee-content__group {
+  display: contents;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.neon-word {
+  font-family: var(--font-family-detail);
+  font-size: var(--fs-m);
+  letter-spacing: var(--tracking-normal); /* era "0.22em" — mesmo valor */
+}
+.neon-purple {
+  color: var(--purple-tint);
+  text-shadow:
+    0 0 12px color-mix(in srgb, var(--purple), transparent 10%),
+    0 0 40px color-mix(in srgb, var(--purple), transparent 60%);
+}
+.neon-blue {
+  color: var(--blue-tint);
+  text-shadow:
+    0 0 12px color-mix(in srgb, var(--blue), transparent 10%),
+    0 0 40px color-mix(in srgb, var(--blue), transparent 60%);
+}
+.neon-pink {
+  color: var(--magenta);
+  text-shadow:
+    0 0 12px color-mix(in srgb, var(--magenta), transparent 10%),
+    0 0 40px color-mix(in srgb, var(--magenta), transparent 60%);
+}
+.neon-yellow {
+  color: var(--amber);
+  text-shadow:
+    0 0 12px rgba(185, 171, 16, 0.9),
+    0 0 40px rgba(185, 160, 16, 0.4);
+}
+.dot {
+  margin: 0 var(--space-13); /* era "2.5rem" (40px) — mesmo valor */
+  color: var(--overlay-white-50);
+  font-size: var(--fs-sm);
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me,
+  .skills {
+    margin: var(--space-17) var(--space-15); /* era "120px 80px" */
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .glass-card {
+    flex: none;
+    width: 100%;
+    max-width: none;
+  }
+  .about-me__photo {
+    width: 80%;
+    max-width: 21.9375rem;
+    align-self: center;
+  }
+  .marquee-section {
+    margin-top: var(--space-14); /* era "50px" — mesmo valor, agora token */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-me,
+  .skills,
+  .contact {
+    margin: var(--space-17) var(--space-6); /* era "120px 20px" */
+  }
+  .contact {
+    margin-bottom: 0;
+  }
+  .glass-card {
+    padding: var(--space-6); /* era "1.25rem" (20px) — mesmo valor */
+  }
+}

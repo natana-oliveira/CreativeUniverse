@@ -1,0 +1,1037 @@
+.main-showcase {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(13% * 2207 / 1440);
+}
+.collage {
+  position: relative;
+  width: 100%;
+  min-width: 45rem;
+  aspect-ratio: 1440 / 2207;
+}
+.collage > * {
+  position: absolute;
+}
+.black-hole.is-open,
+.envelope.is-open,
+.contacto.is-open {
+  z-index: var(
+    --z-panel-open
+  ); /* era "20" — mesmo valor, agora nomeado no :root */
+}
+
+/* -------------  Grupo: Cesae Hub  ---------------- */
+.cesae-hub {
+  left: 2.5%;
+  top: 6%;
+  width: 30%;
+  height: 24%;
+}
+.cesae-hub__frame {
+  position: absolute;
+  left: 10%;
+  width: 81%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cesae-hub__frame-inner {
+  width: 81%;
+  height: 82%;
+  transform: rotate(-14deg);
+  transition:
+    transform 0.4s var(--ease),
+    filter 0.4s var(--ease);
+}
+.cesae-hub__astronaut {
+  position: absolute;
+  top: 24%;
+  width: 37%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cesae-hub__astronaut-inner {
+  height: 97%;
+  animation: astronaut-float 12s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes astronaut-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+}
+
+/* -------------- Grupo: SurfSway ----------------- */
+.surf-sway {
+  left: 38%;
+  top: 12%;
+  width: 27%;
+  height: 13%;
+}
+.surf-sway__surfista {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.4s var(--ease),
+    filter 0.4s var(--ease);
+}
+.surf-sway__stars {
+  position: absolute;
+  left: 72%;
+  height: 30%;
+  object-fit: cover;
+  opacity: 60%;
+}
+
+/* -------------- Grupo: DAB ----------------- */
+.dab {
+  left: 75%;
+  top: 1%;
+  width: 17%;
+  height: 14.5%;
+}
+.dab__jupiter {
+  position: absolute;
+  top: 38%;
+  height: 62%;
+  object-fit: cover;
+  --jupiter-hover-scale: 1;
+  transition:
+    --jupiter-hover-scale 0.4s var(--ease),
+    filter 0.4s var(--ease);
+  animation: complex-jupiter-pulse 12s ease-in-out infinite;
+  will-change: transform;
+}
+@property --jupiter-hover-scale {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+.dab__gato {
+  position: absolute;
+  left: 28%;
+  height: 50%;
+  object-fit: cover;
+  --gato-hover-scale: 1;
+  transition:
+    --gato-hover-scale 0.4s var(--ease),
+    filter 0.4s var(--ease);
+  animation: gato-float 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+@property --gato-hover-scale {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+@keyframes gato-float {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(var(--gato-hover-scale));
+  }
+  20% {
+    transform: translate(0, -3%) rotate(1deg) scale(var(--gato-hover-scale));
+  }
+  40% {
+    transform: translate(3%, -4%) rotate(2deg) scale(var(--gato-hover-scale));
+  }
+  55% {
+    transform: translate(0, 0) rotate(0deg) scale(var(--gato-hover-scale));
+  }
+  75% {
+    transform: translate(-3%, 3%) rotate(-2deg) scale(var(--gato-hover-scale));
+  }
+  90% {
+    transform: translate(0, 2%) rotate(-1deg) scale(var(--gato-hover-scale));
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(var(--gato-hover-scale));
+  }
+}
+
+/* -------------- Coordenadas ----------------- */
+.coordenadas {
+  left: 80%;
+  top: 17%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coordenadas__inner {
+  height: 75%;
+  opacity: 60%;
+}
+
+/* ------------- Grupo: Vinho ---------------- */
+.vinho {
+  left: 3%;
+  top: 38%;
+  width: 28%;
+  height: 22%;
+}
+.vinho__woman {
+  position: absolute;
+  left: 8%;
+  width: 66%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vinho__woman-inner {
+  height: 93%;
+  transform: rotate(-7deg);
+}
+.vinho__earth {
+  position: absolute;
+  top: 32%;
+  width: 80%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vinho__earth-inner {
+  height: 80%;
+  transform: rotate(14deg);
+  animation: earth-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes earth-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(14deg);
+  }
+  50% {
+    transform: translateY(-3%) rotate(16deg);
+  }
+}
+.vinho__saturno {
+  position: absolute;
+  left: 33%;
+  top: 35%;
+  width: 64%;
+  height: 53%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vinho__saturno-inner {
+  height: 80%;
+  transform: rotate(163.89deg) scaleY(-1);
+  animation: saturno-float 8s ease-in-out infinite;
+  animation-delay: -3s;
+  will-change: transform;
+}
+@keyframes saturno-float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(163.89deg) scaleY(-1);
+  }
+  30% {
+    transform: translate(-1.5%, -3%) rotate(162.5deg) scaleY(-1);
+  }
+  65% {
+    transform: translate(1%, -1%) rotate(165deg) scaleY(-1);
+  }
+}
+.vinho__star {
+  position: absolute;
+  left: 76%;
+  top: 34%;
+  height: 8%;
+  object-fit: cover;
+  opacity: 60%;
+}
+
+/* -------------- Grupo: Galeria ----------------- */
+.galeria-group {
+  left: 28%;
+  top: 30%;
+  width: 22%;
+  height: 13.5%;
+}
+.galeria-group__frame {
+  position: absolute;
+  left: 21.466%;
+  height: 100%;
+  object-fit: cover;
+  --frame-hover-scale: 1;
+  transition:
+    --frame-hover-scale 0.4s var(--ease),
+    filter 0.4s var(--ease);
+  animation: frame-gesture 7s ease-in-out infinite;
+  will-change: transform;
+}
+@property --frame-hover-scale {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+@keyframes frame-gesture {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(var(--frame-hover-scale));
+  }
+  45% {
+    transform: translate(2%, 1.5%) rotate(6deg) scale(var(--frame-hover-scale));
+  }
+  75% {
+    transform: translate(1.1%, 0.9%) rotate(0.9deg)
+      scale(var(--frame-hover-scale));
+  }
+}
+.galeria-group__paper-star {
+  position: absolute;
+  left: 8%;
+  top: 40%;
+  height: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galeria-group__paper-star-inner {
+  height: 94%;
+  transform: rotate(-8deg);
+}
+
+/* ------------- Black hole ---------------- */
+.black-hole {
+  left: 53%;
+  top: 36%;
+  height: 14%;
+  display: block;
+  cursor: pointer;
+}
+.black-hole-img {
+  /* width: 100%; */
+  height: 80%;
+  object-fit: cover;
+  transform: rotate(15deg);
+}
+
+.black-hole-message {
+  position: absolute;
+  left: -32%;
+  top: -36%;
+  width: 68%;
+  height: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+.black-hole.is-open .black-hole-message {
+  opacity: 1;
+}
+.black-hole-message__arrow {
+  position: absolute;
+  right: -20%;
+  bottom: -8%;
+  height: 45%;
+  opacity: 55%;
+}
+.black-hole-message__text {
+  margin: 0;
+  font-family: var(--font-family-handwritten);
+  font-size: var(--fs-2xl);
+  line-height: var(--leading-normal); /* era "1.5" — mesmo valor */
+  color: var(--gold);
+  opacity: 55%;
+  text-align: center;
+  transform: rotate(7.25deg);
+}
+
+/* --------------- Grupo: Foody ---------------- */
+.foody {
+  left: 80%;
+  top: 27%;
+  width: 18%;
+  height: 21%;
+}
+.foody__disco {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: disco-float 6s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes disco-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4%);
+  }
+}
+.foody__disco-inner {
+  width: 83%;
+  transform: rotate(6deg);
+}
+.foody__fruta {
+  position: absolute;
+  left: 29%;
+  top: 71%;
+  height: 18%;
+  object-fit: cover;
+  animation: fruta-abduct 12s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes fruta-abduct {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  45% {
+    transform: translateY(-85%);
+    animation-timing-function: linear;
+  }
+  60% {
+    transform: translateY(-85%);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* -------------- Maternar -------------- */
+.maternar {
+  left: 40%;
+  top: 54%;
+  height: 8%;
+  display: block;
+  cursor: pointer;
+}
+.maternar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  ------ Complex Jupiter ------ */
+.complex-jupiter {
+  left: 6%;
+  top: 65%;
+  width: 32%;
+  height: 20%;
+}
+.complex-jupiter__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50% 50% 50% 16.16%;
+}
+.complex-jupiter__bg:hover,
+.fly-me__text:hover {
+  animation: complex-jupiter-pulse 6s ease-in-out infinite;
+}
+.complex-jupiter__spark {
+  position: absolute;
+  left: 18%;
+  top: 23%;
+  height: 60%;
+  border-radius: var(
+    --radius-circle
+  ); /* era "50%" — mesmo valor, agora token */
+  object-fit: cover;
+  opacity: 0.75;
+  animation: complex-jupiter-spin 160s linear infinite;
+}
+.complex-jupiter__planet {
+  position: absolute;
+  left: 34%;
+  top: 36%;
+  height: 32%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------ Grupo: Planet porta ---------- */
+.planet-porta {
+  left: 64%;
+  top: 55%;
+  width: 28%;
+  height: 26%;
+}
+.planet-porta__waves {
+  position: absolute;
+  height: 70%;
+  display: block;
+  overflow: visible;
+  --wave-duration: 14s;
+  --wave-circles: 7;
+}
+.planet-porta__waves circle {
+  cx: 0px;
+  cy: 0px;
+  fill: none;
+  stroke: var(--pink);
+  animation-duration: var(--wave-duration);
+  animation-name: planet-porta-ripple;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: calc(
+    var(--anim-step) * var(--wave-duration) / var(--wave-circles)
+  );
+}
+@keyframes planet-porta-ripple {
+  from {
+    r: 0;
+    opacity: 0.5;
+  }
+  to {
+    r: 100px;
+    opacity: 0;
+  }
+}
+.planet-porta__planet {
+  position: absolute;
+  left: 25%;
+  top: 17.5%;
+  height: 35%;
+  object-fit: cover;
+  opacity: 99%;
+}
+.planet-porta__door {
+  position: absolute;
+  left: 44%;
+  top: 33%;
+  width: 51%;
+  height: 66%;
+  display: block;
+}
+.planet-porta__door-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+.planet-porta__door-img--open {
+  opacity: 0;
+}
+.planet-porta.is-open .planet-porta__door-img--open {
+  opacity: 1;
+}
+.planet-porta.is-open .planet-porta__door-img--closed {
+  opacity: 0;
+}
+@media (hover: hover) {
+  .planet-porta__door:hover .planet-porta__door-img--open {
+    opacity: 1;
+  }
+  .planet-porta__door:hover .planet-porta__door-img--closed {
+    opacity: 0;
+  }
+}
+
+/* ---------------    Envelope  -------------- */
+.envelope {
+  left: 45%;
+  top: 76%;
+  width: 22%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.envelope__inner {
+  position: relative;
+  width: 85%;
+  height: 89%;
+  transform: rotate(-10deg);
+  cursor: pointer;
+}
+.envelope__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+.envelope__img--open {
+  opacity: 0;
+}
+.envelope.is-open .envelope__img--open {
+  opacity: 1;
+}
+.envelope.is-open .envelope__img--closed {
+  opacity: 0;
+}
+
+/*    CV Message  */
+.cv-message {
+  position: absolute;
+  left: 68%;
+  top: 92%;
+  height: 24%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6em;
+  opacity: 0;
+  transform-origin: left top;
+  pointer-events: none;
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+.envelope.is-open .cv-message {
+  opacity: 1;
+  pointer-events: auto;
+}
+.cv-message__arrow {
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  height: 45%;
+  opacity: 55%;
+}
+.cv-message__link {
+  font-family: var(--font-family-handwritten);
+  font-size: var(--fs-2xl);
+  line-height: var(--leading-normal); /* era "1.5" — mesmo valor */
+  color: var(--gold);
+  opacity: 55%;
+  text-decoration: none;
+}
+.cv-message__link:hover,
+.cv-message__link:focus-visible {
+  color: var(--pink);
+}
+
+/* -------  Grupo: Fly me to the moon ----------- */
+.fly-me {
+  left: 8%;
+  top: 95%;
+  width: 31%;
+  height: 5%;
+}
+.fly-me__text {
+  position: absolute;
+  height: 75%;
+  object-fit: cover;
+}
+
+/* -------- Hover "aura galáctica" ------------- */
+.surf-sway:hover .surf-sway__surfista,
+.black-hole-img:hover,
+.galeria-group__frame:hover,
+.maternar img:hover,
+.contacto__trigger:hover,
+.about-me__photo-crop:hover {
+  transform: scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.cesae-hub__frame-inner:hover {
+  transform: rotate(-14deg) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.vinho__woman-inner:hover {
+  transform: rotate(-7deg) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.foody__disco-inner:hover {
+  transform: rotate(6deg) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.envelope__inner:hover {
+  transform: rotate(-10deg) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.dab:hover .dab__jupiter,
+.dab:hover .dab__gato {
+  --jupiter-hover-scale: 1.02;
+  --gato-hover-scale: 1.02;
+  transform: scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+.black-hole-img:hover {
+  transform: rotate(15deg) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
+}
+
+/* --------  Contact Menu --------  */
+.contacto {
+  right: 0%;
+  top: 95%;
+  width: 13.8%;
+  height: 12%;
+  display: block;
+}
+.contacto__trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.3s var(--ease);
+}
+.contacto.is-open .contacto__trigger {
+  transform: scale(1.02);
+}
+
+.contacto__socials {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contacto__icon {
+  width: 24%;
+  aspect-ratio: 1;
+  opacity: 0;
+  border-radius: var(
+    --radius-circle
+  ); /* era "50%" — mesmo valor, agora token */
+  background: var(--card-background);
+  border: 1px solid var(--overlay-white-15);
+}
+.contacto__icon--linkedin {
+  left: -3%;
+  top: -36%;
+  transition-delay: 0.24s;
+}
+.contacto__icon--github {
+  left: -43%;
+  top: -6%;
+  transition-delay: 0.16s;
+}
+.contacto__icon--behance {
+  left: -43%;
+  top: 26%;
+  transition-delay: 0.08s;
+}
+.contacto__icon--mail {
+  left: -3%;
+  top: 56%;
+  transition-delay: 0s;
+}
+.contacto__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.contacto__icon--linkedin svg,
+.contacto__icon--github svg,
+.contacto__icon--behance svg,
+.contacto__icon--mail svg {
+  width: var(--size-icon);
+  height: var(--size-icon);
+  display: block;
+}
+.contacto__icon {
+  color: var(--overlay-white-50);
+}
+
+.contacto.is-open .contacto__icon {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.contacto.is-open .contacto__icon:nth-child(1) {
+  transition-delay: 0s;
+}
+.contacto.is-open .contacto__icon:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.contacto.is-open .contacto__icon:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.contacto.is-open .contacto__icon:nth-child(4) {
+  transition-delay: 0.24s;
+}
+
+.rocket {
+  left: 0%;
+  top: 106%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rocket__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  animation: rocket-flight 14s linear infinite;
+}
+.rocket__inner img {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cesae-hub__frame-inner img,
+.cesae-hub__astronaut-inner img,
+.coordenadas__inner img,
+.vinho__woman-inner img,
+.vinho__earth-inner img,
+.vinho__saturno-inner img,
+.galeria-group__paper-star-inner img,
+.foody__disco-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.surf-sway__surfista,
+.surf-sway__stars,
+.dab__jupiter,
+.dab__gato,
+.vinho__star,
+.galeria-group__frame,
+.foody__fruta,
+.planet-porta__planet,
+.fly-me__text {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .collage {
+    aspect-ratio: 834 / 1360;
+  }
+  .cesae-hub {
+    left: 3%;
+    top: 2.206%;
+    width: 36.665%;
+    height: 24.117%;
+  }
+  .surf-sway {
+    left: 42.834%;
+    top: 5.879%;
+    width: 28.865%;
+    height: 13.497%;
+  }
+  .dab {
+    left: 77.905%;
+    top: 3.135%;
+    width: 18.258%;
+    height: 14.382%;
+  }
+  .coordenadas {
+    left: 80.437%;
+    top: 21.176%;
+    height: 6.516%;
+  }
+  .vinho {
+    left: 6.276%;
+    top: 32.043%;
+    width: 28.386%;
+    height: 20.895%;
+  }
+  .galeria-group {
+    left: 34.687%;
+    top: 28.035%;
+    width: 12.853%;
+    height: 11.197%;
+  }
+  .black-hole {
+    left: 53.021%;
+    top: 27.279%;
+    height: 14.485%;
+  }
+  .foody {
+    left: 78.475%;
+    top: 29.688%;
+    width: 17.681%;
+    height: 19.175%;
+  }
+}
+
+/* ----------------------- Mobile — até 767px ----------------------- */
+@media (max-width: 767px) {
+  .main-showcase {
+    padding-bottom: var(--space-6); /* era "20px" — mesmo valor, agora token */
+  }
+
+  .collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2.75rem, 6vw, 3rem);
+    width: 100%;
+    min-width: 0;
+    max-width: 26rem;
+    aspect-ratio: auto;
+    margin-inline: auto;
+    padding-top: 50px; /* Novo */
+  }
+  .collage > * {
+    position: relative;
+    inset: auto;
+  }
+  .cesae-hub {
+    order: 1;
+    width: 95%;
+    aspect-ratio: 0.816;
+  }
+  .surf-sway {
+    order: 2;
+    width: 90%;
+    aspect-ratio: 1.355;
+  }
+  .dab {
+    order: 3;
+    width: 75%;
+    aspect-ratio: 0.765;
+  }
+  .coordenadas {
+    order: 4;
+    width: 60%;
+    aspect-ratio: 1.19;
+  }
+  .foody {
+    order: 5;
+    width: 72%;
+    aspect-ratio: 0.565;
+  }
+  .black-hole {
+    order: 6;
+    width: 78%;
+    aspect-ratio: 1.11;
+    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+  }
+  .black-hole-message {
+    left: 30%;
+    top: auto;
+    bottom: 92%;
+    width: 80%;
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: bottom center;
+  }
+  .black-hole.is-open .black-hole-message {
+    transform: translateX(-50%) scale(1);
+  }
+  .galeria-group {
+    order: 7;
+    width: 75%;
+    aspect-ratio: 0.903;
+    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+  }
+  .vinho {
+    order: 8;
+    width: 95%;
+    aspect-ratio: 0.83;
+  }
+  .maternar {
+    order: 9;
+    width: 58%;
+    aspect-ratio: 1.069;
+    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+  }
+  .complex-jupiter {
+    order: 10;
+    width: 96%;
+    aspect-ratio: 1.078;
+    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+  }
+  .planet-porta {
+    order: 11;
+    width: 90%;
+    aspect-ratio: 0.699;
+  }
+  .envelope {
+    order: 12;
+    width: 75%;
+    aspect-ratio: 0.894;
+  }
+  .fly-me {
+    order: 13;
+    width: 70%;
+    aspect-ratio: 4;
+    margin: 55px 0;
+    right: 5%;
+  }
+  .contacto {
+    order: 14;
+    width: 50%;
+    aspect-ratio: 0.75;
+    align-self: flex-end;
+    right: calc(50% - 50vw);
+  }
+  .rocket {
+    order: 15;
+    aspect-ratio: 1.952;
+    width: 70%;
+  }
+  .cv-message__arrow {
+    height: 75%;
+  }
+  .cv-message {
+    left: 65%;
+    top: auto;
+    bottom: -22%;
+    /* width: 90%;
+    height: auto; */
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: bottom center;
+  }
+  .envelope.is-open .cv-message {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* ======    Animations ==== */
+@keyframes complex-jupiter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes complex-jupiter-pulse {
+  0%,
+  100% {
+    transform: scale(calc(1 * var(--jupiter-hover-scale)));
+    /* opacity: 0.65; */
+  }
+  50% {
+    transform: scale(calc(1.06 * var(--jupiter-hover-scale)));
+    /* opacity: 0.85; */
+  }
+}
+@keyframes rocket-flight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  10% {
+    transform: translateX(calc(-95% + 10vw));
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(calc(-55% + 90vw));
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw - 50%));
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Pedido de fontes unificado num único link (era 2 pedidos separados)
+         e sem a família Lato, que era carregada com 10 variações de peso/
+         estilo mas nunca era referenciada em nenhum font-family do CSS —
+         só Space Grotesk e Nothing You Could Do são usadas. Menos um
+         round-trip HTTP por página e menos dados transferidos, sem
+         qualquer alteração visual. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Nothing+You+Could+Do&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../CSS/styleGeneral.css" />
+    <link rel="stylesheet" href="../CSS/styleMain.css" />
+    <link rel="stylesheet" href="../CSS/styleAbout.css" />
+    <script src="../JS/script.js" defer></script>
+    <script src="../JS/scriptMain.js" defer></script>
+    <link rel="icon" href="../images/favicon.ico" />
+    <title>Natana Oliveira — About Me</title>
+  </head>
+  <body class="page-about">
+    <script src="../JS/theme.js"></script>
+    <!-- BACKGROUND -->
+    <div class="backgroundPage">
+      <!-- Fundo cósmico -->
+      <div id="cosmic-bg" class="pos-fixed inset-0">
+        <div class="cloud pos-absolute br-50 c1"></div>
+        <div class="cloud pos-absolute br-50 c2"></div>
+        <div class="cloud pos-absolute br-50 c3"></div>
+      </div>
+      <!-- Campo de estrelas -->
+      <div id="stars-bg" class="pos-fixed inset-0 overflow-hidden"></div>
+    </div>
+    <!-- NAV BAR -->
+    <nav id="navbar" class="pos-fixed d-flex align-items-center">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <span class="orbit br-50"></span>natana.o
+      </a>
+      <ul class="nav-links d-flex" id="navLinks">
+        <li>
+          <a href="../index.html#work" class="pos-relative overflow-hidden"
+            >Work</a
+          >
+        </li>
+        <li>
+          <a href="./about.html" class="pos-relative overflow-hidden"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a href="./contact.html" class="pos-relative overflow-hidden"
+            >Contacts</a
+          >
+        </li>
+      </ul>
+      <div class="d-flex align-items-center nav-right">
+        <button
+          id="nav-toggle"
+          class="d-flex align-items-center justify-content-center flex-column br-50"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <button
+          id="theme-toggle"
+          class="d-flex pos-relative overflow-hidden align-items-center justify-content-center br-50"
+        >
+          <svg
+            id="icon-moon"
+            class="theme-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="icon-sun"
+            class="theme-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <main class="pos-relative">
+      <section class="about-me d-flex">
+        <div class="about-me__content d-flex align-items-center">
+          <div class="glass-card d-flex flex-column justify-content-center">
+            <h2><em>Meet the astronaut</em></h2>
+            <p class="paragraph">
+              Hello! I'm Natana, a designer based in Porto, Portugal.
+            </p>
+            <p class="paragraph">
+              My journey spans different orbits of design, leading me to explore
+              a multidisciplinary universe that connects UX/UI & Product Design,
+              Graphic & Fashion Design, Illustration, Animation, Mobile and
+              Front-end Development.
+            </p>
+            <p class="paragraph">
+              Throughout this creative journey, I transform ideas into engaging,
+              intuitive, and visually striking digital experiences, always with
+              the user as the starting point and guide of the mission. I create
+              universes where strategy, aesthetics, and technology meet to bring
+              to life playful, functional, and memorable experiences. Explore
+              some of my projects and join me on this stellar journey through my
+              design universe.
+            </p>
+            <p class="paragraph">
+              Feel free to
+              <a href="../index.html#contact">get in touch</a>!
+            </p>
+          </div>
+          <div class="about-me__photo pos-relative" id="aboutMePhoto">
+            <div
+              class="about-me__photo-crop pos-absolute inset-0 pointer overflow-hidden"
+              onclick="toggleAboutMeImage()"
+            >
+              <!-- Retrato visível já no 1º ecrã da página About — sem
+                   lazy; ambas as imagens do crossfade carregam já, só
+                   uma é revelada de cada vez -->
+              <img
+                class="about-me__photo-img pos-absolute inset-0 object-fit-cover about-me__photo-img--helmet"
+                src="../images/NatanaOAs.png"
+                alt="Illustrated portrait of Natana Oliveira as an astronaut, helmet on"
+                decoding="async"
+              />
+              <img
+                class="about-me__photo-img pos-absolute inset-0 object-fit-cover about-me__photo-img--no-helmet"
+                src="../images/NatanaO.png"
+                alt="Illustrated portrait of Natana Oliveira as an astronaut, helmet off"
+                decoding="async"
+              />
+            </div>
+            <div
+              class="about-me__message pos-absolute d-flex align-items-center pointer"
+              onclick="toggleAboutMeImage()"
+            >
+              <img
+                class="about-me__message-arrow"
+                src="../images/arrowDoodleBlack.png"
+                alt=""
+                decoding="async"
+              />
+              <p class="about-me__message-text text-center">Click!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills d-flex flex-column">
+        <h3 class="section-heading"><em>Skills</em></h3>
+        <div class="cards-row d-grid">
+          <div
+            class="glass-card tech-card tc-ux d-flex flex-column pos-relative overflow-hidden"
+          >
+            <div class="tc-icon">☆</div>
+            <div class="tech-card-content">
+              <h3>UX Design</h3>
+              <p>✦ User Research & Usability Tests</p>
+              <p>✦ Interviews & Surveys</p>
+              <p>✦ Personas & User flows</p>
+              <p>✦ Information Architecture</p>
+              <p>✦ Accessibility & Usability</p>
+            </div>
+            <div class="tc-progress overflow-hidden">
+              <div class="tc-bar" style="--w: 100%"></div>
+            </div>
+          </div>
+          <div
+            class="glass-card tech-card tc-ui d-flex flex-column pos-relative overflow-hidden"
+          >
+            <div class="tc-icon">☆</div>
+            <div class="tech-card-content">
+              <h3>UI Design</h3>
+              <p>✦ Wireframing & Prototyping</p>
+              <p>✦ Design System</p>
+              <p>✦ Interaction Design</p>
+              <p>✦ Responsive Design</p>
+              <p>✦ Implementation with developer(s)</p>
+            </div>
+
+            <div class="tc-progress overflow-hidden">
+              <div class="tc-bar" style="--w: 100%"></div>
+            </div>
+          </div>
+          <div
+            class="glass-card tech-card tc-motion d-flex flex-column pos-relative overflow-hidden"
+          >
+            <div class="tc-icon">☆</div>
+            <div class="tech-card-content">
+              <h3>Motion & Interaction Design</h3>
+              <p>✦ Figma Motion</p>
+              <p>✦ Lottie Animations</p>
+              <p>✦ After Effects</p>
+            </div>
+
+            <div class="tc-progress overflow-hidden">
+              <div class="tc-bar" style="--w: 65%"></div>
+            </div>
+          </div>
+          <div
+            class="glass-card tech-card tc-dev d-flex flex-column pos-relative overflow-hidden"
+          >
+            <div class="tc-icon">☆</div>
+            <div class="tech-card-content">
+              <h3>Front-end Development</h3>
+              <p>✦ HTML/CSS & JavaScript</p>
+              <p>✦ CSS Frameworks (Bootstrap)</p>
+              <p>✦ Version Control (Git)</p>
+              <p>✦ Browser Compatibility</p>
+              <p>✦ UI Component Libraries</p>
+            </div>
+
+            <div class="tc-progress overflow-hidden">
+              <div class="tc-bar" style="--w: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marquee-section overflow-hidden">
+        <div class="marquee-track d-flex overflow-hidden">
+          <div class="marquee-content d-flex align-items-center">
+            <span class="neon-word neon-purple">DESIGN</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-pink">UX/UI</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-blue">MOTION</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-yellow">EXPERIENCE</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-purple">CODING</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-pink">ITERATIVE</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-blue">THINKING</span
+            ><span class="dot">✦</span>
+            <span class="neon-word neon-yellow">CREATIVITY</span
+            ><span class="dot">✦</span>
+            <div class="marquee-content__group" aria-hidden="true">
+              <span class="neon-word neon-purple">DESIGN</span>
+              <span class="dot">✦</span>
+              <span class="neon-word neon-pink">UX/UI</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-blue">MOTION</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-yellow">EXPERIENCE</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-purple">CODING</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-pink">ITERATIVE</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-blue">THINKING</span
+              ><span class="dot">✦</span>
+              <span class="neon-word neon-yellow">CREATIVITY</span
+              ><span class="dot">✦</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="d-flex pos-relative z-1 align-items-center text-center justify-content-center"
+    >
+      <p class="copyright">
+        <em
+          >Created by Natana Oliveira © 2026 - Made with curiosity and a little
+          bit of stardust ✦</em
+        >
+      </p>
+    </footer>
+  </body>
+</html>

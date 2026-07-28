@@ -1,0 +1,144 @@
+#hero {
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  padding-top: calc(
+    var(--nav-padding-y) * 2 + var(--size-toggle) + var(--space-6)
+  );
+}
+.role {
+  font-size: var(--fs-s);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-5);
+}
+
+.hands-container {
+  grid-area: 1 / 1;
+  align-self: start;
+  width: 100%;
+  margin-top: clamp(18px, calc(54px - 1.8vw), 50px);
+  align-items: flex-end;
+}
+.hand {
+  width: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    transform 4s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 3.5s ease;
+}
+.hand img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+.hand.left {
+  transform: translate3d(-100%, 0, 0);
+}
+.hand.right {
+  transform: translate3d(100%, 0, 0);
+}
+.hands-container.in .hand.left,
+.hands-container.in .hand.right {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.hands-container.exit .hand {
+  opacity: 0;
+}
+.hands-container.exit .hand.left {
+  transform: translate3d(-100%, -20%, 0);
+}
+.hands-container.exit .hand.right {
+  transform: translate3d(100%, -20%, 0);
+}
+.hero-content {
+  grid-area: 1 / 1;
+  align-self: start;
+  transition:
+    opacity 4.8s var(--ease) 0.8s,
+    transform 4.8s var(--ease) 0.8s;
+  opacity: 0;
+  transform: translateY(24px);
+  padding-top: 60px;
+}
+
+.hero-content.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-hint {
+  bottom: 38px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  gap: var(--space-3);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  color: var(--overlay-white-50);
+  font-family: var(--font-family-detail);
+  transition: opacity 3.2s var(--ease) 4s;
+  opacity: 0;
+}
+.scroll-hint.in {
+  opacity: 1;
+}
+.falling-star {
+  width: 2px;
+  height: 26px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: fall 1.8s infinite var(--ease);
+}
+body.light .falling-star {
+  background: linear-gradient(180deg, var(--cyan), transparent);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+}
+.scroll-cue {
+  bottom: 3vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(var(--gold), transparent);
+  opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .hand {
+    width: 65%;
+  }
+}
+@media (max-width: 480px) {
+  .scroll-hint {
+    bottom: 22px;
+  }
+  .hand {
+    width: 78%;
+  }
+  .role {
+    letter-spacing: var(--tracking-normal);
+    margin-bottom: var(--space-3);
+  }
+}

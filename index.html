@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Nothing+You+Could+Do&display=swap"
+      rel="stylesheet"
+    />
+    <!-- META -->
+
+    <link rel="stylesheet" href="./CSS/styleGeneral.css" />
+    <link rel="stylesheet" href="./CSS/styleIndex.css" />
+    <link rel="stylesheet" href="./CSS/styleMain.css" />
+    <script src="./JS/script.js" defer></script>
+    <script src="./JS/scriptMain.js" defer></script>
+    <link rel="icon" href="./images/favicon.ico" />
+    <title>Natana Oliveira — Portfolio</title>
+  </head>
+  <body>
+    <script src="./JS/theme.js"></script>
+    <div class="backgroundPage">
+      <!-- Fundo cósmico -->
+      <div id="cosmic-bg" class="pos-fixed inset-0">
+        <div class="cloud pos-absolute br-50 c1"></div>
+        <div class="cloud pos-absolute br-50 c2"></div>
+        <div class="cloud pos-absolute br-50 c3"></div>
+      </div>
+      <!-- Campo de estrelas -->
+      <div id="stars-bg" class="pos-fixed inset-0 overflow-hidden"></div>
+    </div>
+    <nav id="navbar" class="pos-fixed d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class="orbit br-50"></span>natana.o
+      </a>
+      <ul class="nav-links d-flex" id="navLinks">
+        <li>
+          <a href="#work" class="pos-relative overflow-hidden">Work</a>
+        </li>
+        <li>
+          <a href="./pages/about.html" class="pos-relative overflow-hidden"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a href="./pages/contact.html" class="pos-relative overflow-hidden"
+            >Contacts</a
+          >
+        </li>
+      </ul>
+      <div class="d-flex align-items-center nav-right">
+        <button
+          id="nav-toggle"
+          class="d-flex align-items-center justify-content-center flex-column br-50"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <button
+          id="theme-toggle"
+          class="d-flex pos-relative overflow-hidden align-items-center justify-content-center br-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="icon-sun"
+            class="theme-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            />
+          </svg>
+          <svg
+            id="icon-moon"
+            class="theme-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <main class="pos-relative">
+      <section
+        id="hero"
+        class="hero d-grid pos-relative overflow-hidden flex-column text-center"
+      >
+        <div class="hero-content pos-relative z-3">
+          <div class="role">Product & UX/UI Designer</div>
+          <h1><em>creative universe</em></h1>
+        </div>
+        <div
+          class="hands-container d-flex pos-relative z-1"
+          id="handsContainer"
+        >
+          <div class="hand left">
+            <img
+              src="./images/hero_leftHand.png"
+              alt=""
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="hand right">
+            <img
+              src="./images/hero_rightHand.png"
+              alt=""
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <div
+          class="scroll-hint d-flex pos-absolute flex-column align-items-center z-3"
+        >
+          <span class="falling-star"></span>
+          <p>Explorar</p>
+        </div>
+        <div class="scroll-cue pos-absolute z-3"></div>
+      </section>
+      <section class="main-showcase" aria-label="Universo de projetos">
+        <div class="collage" id="work">
+          <div class="cesae-hub">
+            <div class="cesae-hub__frame">
+              <a
+                class="cesae-hub__frame-inner"
+                href="https://www.figma.com/proto/mgKX76jMK7cxZohMOxwKzy/Untitled?node-id=1-2764&p=f&viewport=-88%2C-616%2C0.09&t=TGjTHqQn2fTSTY17-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A6774&page-id=0%3A1"
+                target="_blank"
+                ><img
+                  src="./images/frameCesaeBlack.svg"
+                  alt="Cesae Hub"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+            </div>
+            <div class="cesae-hub__astronaut">
+              <div class="cesae-hub__astronaut-inner">
+                <img
+                  src="./images/astronaut.png"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="surf-sway">
+            <a href="https://surfsway.netlify.app/" target="_blank">
+              <img
+                class="surf-sway__surfista"
+                src="./images/surfer.png"
+                alt="Surfista"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <img
+              class="surf-sway__stars"
+              src="./images/starsBlack.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="dab">
+            <a
+              href="https://www.figma.com/proto/DFqbTHt3FXeieIbnkll6Ia/DAB?node-id=1-2704&viewport=-902%2C-81%2C0.1&t=WoSRyn6AXGT7l7og-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2034&page-id=0%3A1"
+              target="_blank"
+              ><img
+                class="dab__jupiter"
+                src="./images/jupiter.png"
+                alt="Jupiter"
+                loading="lazy"
+                decoding="async" />
+              <img
+                class="dab__gato"
+                src="./images/cat.png"
+                alt="Gato astronauta"
+                loading="lazy"
+                decoding="async"
+            /></a>
+          </div>
+          <div class="coordenadas">
+            <div class="coordenadas__inner">
+              <img
+                src="./images/coordinateBlack.png"
+                alt="Coordenadas"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <!-- Grupo: Vinho -->
+          <div class="vinho">
+            <a href="#" target="_blank">
+              <div class="vinho__woman">
+                <div class="vinho__woman-inner">
+                  <img
+                    src="./images/woman.png"
+                    alt="Mulher a beber vinho"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="vinho__earth">
+                <div class="vinho__earth-inner">
+                  <img
+                    src="./images/earth.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="vinho__saturno">
+                <div class="vinho__saturno-inner">
+                  <img
+                    src="./images/saturno.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </a>
+            <img
+              class="vinho__star"
+              src="./images/starBlack.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="galeria-group">
+            <!-- TODO: substituir "#" pelo link final do projeto" -->
+            <a href="#" target="_blank">
+              <img
+                class="galeria-group__frame"
+                src="./images/gallery.png"
+                alt="Galeria"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <div class="galeria-group__paper-star">
+              <div class="galeria-group__paper-star-inner">
+                <img
+                  src="./images/paperStar.png"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="black-hole" id="blackHole">
+            <img
+              src="./images/blackHole.png"
+              alt="Black Hole"
+              class="black-hole-img"
+              onclick="toggleBlackHoleMessage()"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="black-hole-message">
+              <img
+                class="black-hole-message__arrow"
+                src="./images/arrowDoodleBlack.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="black-hole-message__text">
+                This is a black hole. Don't get lost here!
+              </p>
+            </div>
+          </div>
+          <div class="foody">
+            <a
+              href="https://natana-oliveira.github.io/FoodyApp/"
+              target="_blank"
+            >
+              <div class="foody__disco">
+                <div class="foody__disco-inner">
+                  <img
+                    src="./images/disco.png"
+                    alt="Foody"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <img
+                class="foody__fruta"
+                src="./images/fruit.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
+          <div class="complex-jupiter">
+            <img
+              class="complex-jupiter__bg"
+              src="./images/complexJupiterBG.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="complex-jupiter__spark"
+              src="./images/spark.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="complex-jupiter__planet"
+              src="./images/bluePlanet.png"
+              alt="Jupiter — visualização interativa"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <a
+            class="maternar"
+            href="https://maternaremequilibrio.pt/"
+            target="_blank"
+          >
+            <img
+              src="./images/Maternar2.png"
+              alt="Maternar"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="planet-porta">
+            <svg
+              class="planet-porta__waves"
+              viewBox="-100 -100 200 200"
+              preserveAspectRatio="xMidYMid"
+              aria-hidden="true"
+            >
+              <g fill="none" stroke="#A8A8A8" stroke-width="1">
+                <circle style="--anim-step: 0"></circle>
+                <circle style="--anim-step: -1"></circle>
+                <circle style="--anim-step: -2"></circle>
+                <circle style="--anim-step: -3"></circle>
+                <circle style="--anim-step: -4"></circle>
+                <circle style="--anim-step: -5"></circle>
+                <circle style="--anim-step: -6"></circle>
+              </g>
+            </svg>
+            <img
+              class="planet-porta__planet"
+              src="./images/Planeta colorido.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="planet-porta__door">
+              <img
+                class="planet-porta__door-img planet-porta__door-img--closed"
+                src="./images/PortaFechada.png"
+                alt="Porta fechada"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                class="planet-porta__door-img planet-porta__door-img--open"
+                src="./images/PortaAberta.png"
+                alt="Porta aberta"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <div class="envelope" id="envelope">
+            <div class="envelope__inner" onclick="toggleCVMessage()">
+              <img
+                class="envelope__img envelope__img--closed"
+                src="./images/Envelope fechado.png"
+                alt="Envelope fechado"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                class="envelope__img envelope__img--open"
+                src="./images/Envelope aberto.png"
+                alt="Envelope aberto"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cv-message">
+              <img
+                class="cv-message__arrow"
+                src="./images/arrowDoodleBlack.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <a
+                class="cv-message__link"
+                href="https://drive.google.com/file/d/1WuO-ekSQG_qZb_68SY_GhoPYXtTFmLUF/view?usp=sharing"
+                target="_blank"
+                onclick="event.stopPropagation()"
+                >Download my CV</a
+              >
+            </div>
+          </div>
+          <div class="fly-me">
+            <img
+              class="fly-me__text"
+              src="./images/Fly me to.png"
+              alt="Fly me to the moon"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="contacto" id="contact">
+            <img
+              class="contacto__trigger"
+              src="./images/megafone.png"
+              alt="Contacto"
+              onclick="toggleContactMenu()"
+              loading="lazy"
+              decoding="async"
+            />
+            <nav class="contacto__socials z-3" aria-label="Redes sociais">
+              <a
+                class="contacto__icon contact-home pos-absolute d-flex align-items-center justify-content-center overflow-hidden contacto__icon--linkedin"
+                href="https://www.linkedin.com/in/natanaoliveira/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path
+                    d="M20 20h-4v-7c0-1.92-.85-2.99-2.37-2.99-1.65 0-2.63 1.12-2.63 2.99v7H7V7h4v1.46s1.25-2.2 4.08-2.2S20 7.99 20 11.56zM2.44 4.92A2.45 2.45 0 010 2.46 2.45 2.45 0 012.44 0c1.35 0 2.44 1.1 2.44 2.46a2.45 2.45 0 01-2.44 2.46M0 20h5V7H0z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                class="contacto__icon contact-home pos-absolute d-flex align-items-center justify-content-center overflow-hidden contacto__icon--github"
+                href="https://github.com/natana-oliveira"
+                target="_blank"
+                aria-label="GitHub"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 1920 1920"
+                >
+                  <path
+                    d="M1821.63 637.76c0-130.03-43.63-236.37-116.05-319.68 11.63-30.19 50.35-151.36-11.2-315.31 0 0-94.72-32-310.4 122.13-90.13-26.45-186.77-39.68-282.77-40.11-96 .43-192.64 13.65-282.67 40.11C602.75-29.23 507.92 2.77 507.92 2.77c-61.55 163.95-22.72 285.12-11.09 315.31-72.32 83.31-116.27 189.65-116.27 319.68 0 456.53 263.68 558.72 514.45 588.8 0 0-180.27 111.68-180.27 299.41-64.32 30.51-336.53 123.95-437.33-58.13 0 0-59.63-114.35-173.01-122.77 0 0-110.29-1.49-7.79 72.43 0 0 74.03 36.69 125.44 174.29 0 0 57.17 289.92 489.07 159.68 4.37 2.24 1.6 140.27 1.6 168.53h777.17s1.28-277.01 1.28-365.12c0-216.64-144.64-292.48-185.28-329.28 251.63-29.44 515.73-130.13 515.73-587.84"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                class="contacto__icon contact-home pos-absolute d-flex align-items-center justify-content-center overflow-hidden contacto__icon--behance"
+                href="https://www.behance.net/natana_oliveira"
+                target="_blank"
+                aria-label="Behance"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -3.5 20 20">
+                  <path
+                    d="M12.98 2.12h5.09V.66h-5.09zm2.51 2.92c-1.14 0-2 .71-2.08 2.01h4.07c-.28-1.55-.96-2.01-1.99-2.01m.16 6.03c1.05 0 1.82-.66 1.97-1.22h2.21C19.2 11.87 17.9 13 15.56 13c-2.98 0-4.65-2.12-4.65-4.93 0-6.63 9.56-6.87 9.07.61h-6.57c.06 1.52.69 2.39 2.24 2.39m-9.92-.29c1.2 0 2.04-.46 2.04-1.71 0-1.3-.74-1.86-1.99-1.86H2.77v3.57zm-.16-5.52c1 0 1.69-.46 1.69-1.55 0-1.14-.8-1.49-1.9-1.49H2.77v3.04zM5.92 0C8.3 0 9.94.78 9.94 3.22c0 1.21-.48 2.11-1.71 2.72 1.57.46 2.31 1.68 2.31 3.29 0 2.55-2.02 3.77-4.44 3.77H0V0z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                class="contacto__icon contact-home pos-absolute d-flex align-items-center justify-content-center overflow-hidden contacto__icon--mail"
+                href="mailto:natana.ao@gmail.com"
+                aria-label="Email"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M510.68 112.28a71 71 0 00-14.66-31.05 70.9 70.9 0 00-55.03-26.15H71.02a71 71 0 00-55.03 26.15 70 70 0 00-14.6 31.05A68 68 0 000 126.09v259.83c0 9.97 2.11 19.55 5.88 28.2a70 70 0 0014.93 22 77 77 0 004.89 4.49 71 71 0 0045.32 16.32h369.96a70.5 70.5 0 0045.32-16.38 71 71 0 0019.88-26.43v-.06a70 70 0 005.81-28.14V126.09c.01-4.69-.45-9.33-1.31-13.81M46.51 101.57a34.3 34.3 0 0124.51-10.18h369.96a34.2 34.2 0 0127.62 13.82L274.7 274.2a28 28 0 01-18.7 7 28.4 28.4 0 01-18.7-7L43.47 105.14a27 27 0 013.04-3.57M36.33 385.92V142.74l140.33 122.41L36.41 387.44q-.1-.72-.08-1.52m404.65 34.68H71.02a34 34 0 01-17.17-4.55l147.98-128.96 13.81 12.02A61.6 61.6 0 00256 314.24a61.7 61.7 0 0040.43-15.13l13.81-12.02 147.92 128.96a34 34 0 01-17.18 4.55m34.69-34.68q.02.8-.07 1.51L335.35 265.22 475.67 142.8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </nav>
+          </div>
+          <div class="rocket">
+            <div class="rocket__inner">
+              <img
+                src="./images/rocket.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="d-flex pos-relative z-1 align-items-center text-center justify-content-center"
+    >
+      <p class="copyright">
+        <em
+          >Created by Natana Oliveira © 2026 - Made with curiosity and a little
+          bit of stardust ✦</em
+        >
+      </p>
+    </footer>
+  </body>
+</html>
