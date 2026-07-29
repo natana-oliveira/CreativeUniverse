@@ -10,14 +10,14 @@
   margin-bottom: 0;
 }
 .contact__card {
-  gap: var(--space-13); /* era "2.5rem" (40px) — mesmo valor, agora token */
+  gap: var(--space-13);
 }
 .contact .contact__card {
   width: 100%;
   max-width: clamp(50rem, 65vw, 50rem);
 }
 .contact__intro {
-  gap: var(--space-3); /* 10px no Figma — mesmo valor, agora token */
+  gap: var(--space-3);
 }
 .contact__email {
   font-weight: var(--fw-medium);
@@ -34,10 +34,10 @@
 }
 
 .contact__social-block {
-  gap: var(--space-10); /* era "1.5rem" (24px) — mesmo valor, agora token */
+  gap: var(--space-10);
 }
 .contact-page__socials {
-  gap: var(--space-14); /* 50px, igual à Homepage — agora token */
+  gap: var(--space-14);
   width: 100%;
   color: var(--overlay-white-50);
 }

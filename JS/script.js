@@ -1,15 +1,12 @@
 let body = document.querySelector("body");
 let themeBtn = document.getElementById("theme-toggle");
 
-/* ---------- Modo Noturno ---------- */
-/* Lógica de tema (mapa de imagens, applyTheme, persistência) vive em theme.js, partilhado por todas as páginas. Aqui só ligamos o clique. */
 themeBtn.addEventListener("click", () => {
   const isLight = !document.body.classList.contains("light");
   localStorage.setItem(THEME_STORAGE_KEY, isLight ? "light" : "dark");
   applyTheme(isLight);
 });
 
-/* ---------- Menu mobile (hamburger) ---------- */
 const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -40,11 +37,6 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 768) closeMobileMenu();
 });
 
-/* ---------- Legibilidade da navbar ao fazer scroll — ADICIONADO ----------
-   Porquê: liga/desliga a classe "scrolled" no <nav>, que a CSS usa para
-   mostrar (com fade) o brilho/blur muito subtil atrás da navbar — só
-   isso, não mexe na animação de entrada (nav#navbar.in) nem em mais
-   nada da navbar. */
 const navbarEl = document.getElementById("navbar");
 function updateNavbarScrolled() {
   navbarEl.classList.toggle("scrolled", window.scrollY > 10);
@@ -52,7 +44,6 @@ function updateNavbarScrolled() {
 updateNavbarScrolled();
 window.addEventListener("scroll", updateNavbarScrolled, { passive: true });
 
-/* ---------- Brilho do hover a seguir o cursor ---------- */
 navLinks.querySelectorAll("a").forEach((a) => {
   a.addEventListener("mousemove", (e) => {
     const r = a.getBoundingClientRect();
@@ -61,7 +52,6 @@ navLinks.querySelectorAll("a").forEach((a) => {
   });
 });
 
-/* ---------- Criar as estrelas dinamicas ---------- */
 function spawnStars(container, count, goldRatio) {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < count; i++) {
@@ -75,14 +65,12 @@ function spawnStars(container, count, goldRatio) {
   container.appendChild(frag);
 }
 
-spawnStars(document.getElementById("stars-bg"), 400, 0.2); // Cria: 400 estrelas -  20% douradas -  posições aleatórias
+spawnStars(document.getElementById("stars-bg"), 400, 0.2);
 
 (function () {
-  // Entrada da mão após 2s
   const stage = document.getElementById("handsContainer");
   setTimeout(() => stage.classList.add("in"), 2000);
 
-  // Exit on scroll
   let exited = false;
   window.addEventListener(
     "scroll",
@@ -99,7 +87,6 @@ spawnStars(document.getElementById("stars-bg"), 400, 0.2); // Cria: 400 estrelas
   );
 })();
 
-/*  ---------- Entrance sequence ---------- */
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.getElementById("navbar").classList.add("in");

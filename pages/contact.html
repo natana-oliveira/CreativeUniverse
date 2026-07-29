@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Pedido de fontes unificado num único link (era 2 pedidos separados)
-         e sem a família Lato, que era carregada com 10 variações de peso/
-         estilo mas nunca era referenciada em nenhum font-family do CSS —
-         só Space Grotesk e Nothing You Could Do são usadas. Menos um
-         round-trip HTTP por página e menos dados transferidos, sem
-         qualquer alteração visual. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Nothing+You+Could+Do&display=swap"
       rel="stylesheet"
@@ -26,18 +20,14 @@
   </head>
   <body class="page-about">
     <script src="../JS/theme.js"></script>
-    <!-- BACKGROUND -->
     <div class="backgroundPage">
-      <!-- Fundo cósmico -->
       <div id="cosmic-bg" class="pos-fixed inset-0">
         <div class="cloud pos-absolute br-50 c1"></div>
         <div class="cloud pos-absolute br-50 c2"></div>
         <div class="cloud pos-absolute br-50 c3"></div>
       </div>
-      <!-- Campo de estrelas -->
       <div id="stars-bg" class="pos-fixed inset-0 overflow-hidden"></div>
     </div>
-    <!-- NAV BAR -->
     <nav id="navbar" class="pos-fixed d-flex align-items-center">
       <a href="../index.html" class="logo d-flex align-items-center">
         <span class="orbit br-50"></span>natana.o

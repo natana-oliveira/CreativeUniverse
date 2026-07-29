@@ -1,6 +1,5 @@
 const THEME_STORAGE_KEY = "theme";
 
-/* ---------- Modo Noturno ---------- */
 const LIGHT_MODE_IMAGES = {
   "frameCesaeBlack.svg": "frameCesaeLight.svg",
   "coordinateBlack.png": "coordinateLight.png",
@@ -39,9 +38,6 @@ function isLightThemeStored() {
   return localStorage.getItem(THEME_STORAGE_KEY) === "light";
 }
 
-/* Aplica o tema já guardado assim que <body> existe (evita o "flash" do
-   tema errado), e volta a aplicá-lo quando o DOM estiver completo, para
-   trocar também as imagens (que ainda não existem neste ponto inicial). */
 (function () {
   const isLight = isLightThemeStored();
   applyTheme(isLight);

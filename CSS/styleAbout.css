@@ -6,13 +6,13 @@ body.page-about #navbar {
 .about-me,
 .skills,
 .contact {
-  margin: var(--space-17) var(--space-15); /* era "120px 80px" — mesmo valor */
+  margin: var(--space-17) var(--space-15);
 }
 .about-me__content {
-  gap: var(--space-15); /* era "5rem" (80px) — mesmo valor, agora token */
+  gap: var(--space-15);
 }
 .glass-card {
-  padding: var(--space-11); /* era "1.75rem" (28px) — mesmo valor */
+  padding: var(--space-11);
   background: var(--card-background);
   border: 1px solid var(--overlay-white-08);
   border-radius: 1.75rem;
@@ -21,8 +21,8 @@ body.page-about #navbar {
   margin: 0;
   color: var(--overlay-white-50);
   font-size: var(--fs-m);
-  line-height: var(--leading-relaxed); /* era "1.66" — mesmo valor */
-  padding-bottom: var(--space-2); /* era "8px" — mesmo valor, agora token */
+  line-height: var(--leading-relaxed);
+  padding-bottom: var(--space-2);
 }
 .glass-card a {
   color: inherit;
@@ -80,7 +80,7 @@ body.page-about #navbar {
   width: 7.0625rem;
   font-family: var(--font-family-handwritten);
   font-size: var(--fs-2xl);
-  line-height: var(--leading-snug); /* era "1.36" — mesmo valor */
+  line-height: var(--leading-snug);
   color: var(--gold);
   opacity: 55%;
 }
@@ -93,7 +93,7 @@ body.page-about #navbar {
 }
 .cards-row {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-6); /* era "1.25rem" (20px) — mesmo valor, agora token */
+  gap: var(--space-6);
 }
 .tech-card {
   transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -169,7 +169,7 @@ body.page-about #navbar {
 }
 .tc-icon {
   font-size: var(--fs-2xl);
-  margin-bottom: var(--space-9); /* era "1rem" (16px) — mesmo valor */
+  margin-bottom: var(--space-9);
   width: 10%;
   display: inline-block;
   animation: spin-slow 8s linear infinite;
@@ -200,9 +200,7 @@ body.page-about #navbar {
 }
 .tc-bar {
   height: 100%;
-  border-radius: var(
-    --radius-pill
-  ); /* era "100px" — mesmo valor, agora token */
+  border-radius: var(--radius-pill);
   animation: bar-fill 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
 }
 @keyframes bar-fill {
@@ -226,8 +224,8 @@ body.page-about #navbar {
   background: var(--gradient-dev);
 }
 .marquee-section {
-  margin-top: var(--space-16); /* era "100px" — mesmo valor, agora token */
-  padding: var(--space-13) 0; /* era "2.5rem" (40px) — mesmo valor */
+  margin-top: var(--space-16);
+  padding: var(--space-13) 0;
   border-top: 1px solid var(--overlay-white-08);
   border-bottom: 1px solid var(--overlay-white-08);
   mask-image: linear-gradient(
@@ -263,7 +261,7 @@ body.page-about #navbar {
 .neon-word {
   font-family: var(--font-family-detail);
   font-size: var(--fs-m);
-  letter-spacing: var(--tracking-normal); /* era "0.22em" — mesmo valor */
+  letter-spacing: var(--tracking-normal);
 }
 .neon-purple {
   color: var(--purple-tint);
@@ -290,7 +288,7 @@ body.page-about #navbar {
     0 0 40px rgba(185, 160, 16, 0.4);
 }
 .dot {
-  margin: 0 var(--space-13); /* era "2.5rem" (40px) — mesmo valor */
+  margin: 0 var(--space-13);
   color: var(--overlay-white-50);
   font-size: var(--fs-sm);
 }
@@ -298,7 +296,7 @@ body.page-about #navbar {
 @media screen and (max-width: 1024px) {
   .about-me,
   .skills {
-    margin: var(--space-17) var(--space-15); /* era "120px 80px" */
+    margin: var(--space-17) var(--space-15);
   }
   .contact {
     flex-direction: column;
@@ -319,7 +317,7 @@ body.page-about #navbar {
     align-self: center;
   }
   .marquee-section {
-    margin-top: var(--space-14); /* era "50px" — mesmo valor, agora token */
+    margin-top: var(--space-14);
   }
 }
 
@@ -327,12 +325,12 @@ body.page-about #navbar {
   .about-me,
   .skills,
   .contact {
-    margin: var(--space-17) var(--space-6); /* era "120px 20px" */
+    margin: var(--space-17) var(--space-6);
   }
   .contact {
     margin-bottom: 0;
   }
   .glass-card {
-    padding: var(--space-6); /* era "1.25rem" (20px) — mesmo valor */
+    padding: var(--space-6);
   }
 }

@@ -15,12 +15,8 @@
 .black-hole.is-open,
 .envelope.is-open,
 .contacto.is-open {
-  z-index: var(
-    --z-panel-open
-  ); /* era "20" — mesmo valor, agora nomeado no :root */
+  z-index: var(--z-panel-open);
 }
-
-/* -------------  Grupo: Cesae Hub  ---------------- */
 .cesae-hub {
   left: 2.5%;
   top: 6%;
@@ -67,8 +63,6 @@
     transform: translateY(-20%);
   }
 }
-
-/* -------------- Grupo: SurfSway ----------------- */
 .surf-sway {
   left: 38%;
   top: 12%;
@@ -90,8 +84,6 @@
   object-fit: cover;
   opacity: 60%;
 }
-
-/* -------------- Grupo: DAB ----------------- */
 .dab {
   left: 75%;
   top: 1%;
@@ -155,8 +147,6 @@
     transform: translate(0, 0) rotate(0deg) scale(var(--gato-hover-scale));
   }
 }
-
-/* -------------- Coordenadas ----------------- */
 .coordenadas {
   left: 80%;
   top: 17%;
@@ -169,8 +159,6 @@
   height: 75%;
   opacity: 60%;
 }
-
-/* ------------- Grupo: Vinho ---------------- */
 .vinho {
   left: 3%;
   top: 38%;
@@ -251,8 +239,6 @@
   object-fit: cover;
   opacity: 60%;
 }
-
-/* -------------- Grupo: Galeria ----------------- */
 .galeria-group {
   left: 28%;
   top: 30%;
@@ -302,8 +288,6 @@
   height: 94%;
   transform: rotate(-8deg);
 }
-
-/* ------------- Black hole ---------------- */
 .black-hole {
   left: 53%;
   top: 36%;
@@ -312,12 +296,10 @@
   cursor: pointer;
 }
 .black-hole-img {
-  /* width: 100%; */
   height: 80%;
   object-fit: cover;
   transform: rotate(15deg);
 }
-
 .black-hole-message {
   position: absolute;
   left: -32%;
@@ -349,14 +331,12 @@
   margin: 0;
   font-family: var(--font-family-handwritten);
   font-size: var(--fs-2xl);
-  line-height: var(--leading-normal); /* era "1.5" — mesmo valor */
+  line-height: var(--leading-normal);
   color: var(--gold);
   opacity: 55%;
   text-align: center;
   transform: rotate(7.25deg);
 }
-
-/* --------------- Grupo: Foody ---------------- */
 .foody {
   left: 80%;
   top: 27%;
@@ -410,8 +390,6 @@
     transform: translateY(0);
   }
 }
-
-/* -------------- Maternar -------------- */
 .maternar {
   left: 40%;
   top: 54%;
@@ -424,8 +402,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-/*  ------ Complex Jupiter ------ */
 .complex-jupiter {
   left: 6%;
   top: 65%;
@@ -449,9 +425,7 @@
   left: 18%;
   top: 23%;
   height: 60%;
-  border-radius: var(
-    --radius-circle
-  ); /* era "50%" — mesmo valor, agora token */
+  border-radius: var(--radius-circle);
   object-fit: cover;
   opacity: 0.75;
   animation: complex-jupiter-spin 160s linear infinite;
@@ -464,8 +438,6 @@
   object-fit: cover;
   display: block;
 }
-
-/* ------ Grupo: Planet porta ---------- */
 .planet-porta {
   left: 64%;
   top: 55%;
@@ -544,8 +516,6 @@
     opacity: 0;
   }
 }
-
-/* ---------------    Envelope  -------------- */
 .envelope {
   left: 45%;
   top: 76%;
@@ -579,8 +549,6 @@
 .envelope.is-open .envelope__img--closed {
   opacity: 0;
 }
-
-/*    CV Message  */
 .cv-message {
   position: absolute;
   left: 68%;
@@ -609,7 +577,7 @@
 .cv-message__link {
   font-family: var(--font-family-handwritten);
   font-size: var(--fs-2xl);
-  line-height: var(--leading-normal); /* era "1.5" — mesmo valor */
+  line-height: var(--leading-normal);
   color: var(--gold);
   opacity: 55%;
   text-decoration: none;
@@ -618,8 +586,6 @@
 .cv-message__link:focus-visible {
   color: var(--pink);
 }
-
-/* -------  Grupo: Fly me to the moon ----------- */
 .fly-me {
   left: 8%;
   top: 95%;
@@ -631,8 +597,6 @@
   height: 75%;
   object-fit: cover;
 }
-
-/* -------- Hover "aura galáctica" ------------- */
 .surf-sway:hover .surf-sway__surfista,
 .black-hole-img:hover,
 .galeria-group__frame:hover,
@@ -669,8 +633,6 @@
   transform: rotate(15deg) scale(1.02);
   filter: brightness(1.08) drop-shadow(0 0 0.95rem var(--glow-color));
 }
-
-/* --------  Contact Menu --------  */
 .contacto {
   right: 0%;
   top: 95%;
@@ -690,20 +652,16 @@
 .contacto.is-open .contacto__trigger {
   transform: scale(1.02);
 }
-
 .contacto__socials {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
-
 .contacto__icon {
   width: 24%;
   aspect-ratio: 1;
   opacity: 0;
-  border-radius: var(
-    --radius-circle
-  ); /* era "50%" — mesmo valor, agora token */
+  border-radius: var(--radius-circle);
   background: var(--card-background);
   border: 1px solid var(--overlay-white-15);
 }
@@ -744,7 +702,6 @@
 .contacto__icon {
   color: var(--overlay-white-50);
 }
-
 .contacto.is-open .contacto__icon {
   opacity: 1;
   transform: translateY(0);
@@ -763,7 +720,6 @@
 .contacto.is-open .contacto__icon:nth-child(4) {
   transition-delay: 0.24s;
 }
-
 .rocket {
   left: 0%;
   top: 106%;
@@ -785,7 +741,6 @@
   height: 100%;
   object-fit: contain;
 }
-
 .cesae-hub__frame-inner img,
 .cesae-hub__astronaut-inner img,
 .coordenadas__inner img,
@@ -799,7 +754,6 @@
   height: 100%;
   object-fit: cover;
 }
-
 .surf-sway__surfista,
 .surf-sway__stars,
 .dab__jupiter,
@@ -811,7 +765,6 @@
 .fly-me__text {
   display: block;
 }
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .collage {
     aspect-ratio: 834 / 1360;
@@ -864,12 +817,10 @@
   }
 }
 
-/* ----------------------- Mobile — até 767px ----------------------- */
 @media (max-width: 767px) {
   .main-showcase {
-    padding-bottom: var(--space-6); /* era "20px" — mesmo valor, agora token */
+    padding-bottom: var(--space-6);
   }
-
   .collage {
     display: flex;
     flex-direction: column;
@@ -880,7 +831,7 @@
     max-width: 26rem;
     aspect-ratio: auto;
     margin-inline: auto;
-    padding-top: 50px; /* Novo */
+    padding-top: 50px;
   }
   .collage > * {
     position: relative;
@@ -915,7 +866,7 @@
     order: 6;
     width: 78%;
     aspect-ratio: 1.11;
-    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+    margin: var(--space-12) 0;
   }
   .black-hole-message {
     left: 30%;
@@ -932,7 +883,7 @@
     order: 7;
     width: 75%;
     aspect-ratio: 0.903;
-    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+    margin: var(--space-12) 0;
   }
   .vinho {
     order: 8;
@@ -943,13 +894,13 @@
     order: 9;
     width: 58%;
     aspect-ratio: 1.069;
-    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+    margin: var(--space-12) 0;
   }
   .complex-jupiter {
     order: 10;
     width: 96%;
     aspect-ratio: 1.078;
-    margin: var(--space-12) 0; /* era "30px 0" — mesmo valor, agora token */
+    margin: var(--space-12) 0;
   }
   .planet-porta {
     order: 11;
@@ -987,8 +938,6 @@
     left: 65%;
     top: auto;
     bottom: -22%;
-    /* width: 90%;
-    height: auto; */
     transform: translateX(-50%) scale(0.85);
     transform-origin: bottom center;
   }
@@ -997,7 +946,6 @@
   }
 }
 
-/* ======    Animations ==== */
 @keyframes complex-jupiter-spin {
   from {
     transform: rotate(0deg);
@@ -1010,11 +958,9 @@
   0%,
   100% {
     transform: scale(calc(1 * var(--jupiter-hover-scale)));
-    /* opacity: 0.65; */
   }
   50% {
     transform: scale(calc(1.06 * var(--jupiter-hover-scale)));
-    /* opacity: 0.85; */
   }
 }
 @keyframes rocket-flight {
