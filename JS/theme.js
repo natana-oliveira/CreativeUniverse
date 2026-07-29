@@ -2,17 +2,17 @@ const THEME_STORAGE_KEY = "theme";
 
 const LIGHT_MODE_IMAGES = {
   "frameCesaeBlack.svg": "frameCesaeLight.svg",
-  "coordinateBlack.png": "coordinateLight.png",
-  "starsBlack.png": "starsLight.png",
-  "disco.png": "discoLight.png",
-  "gallery.png": "galleryLight.png",
-  "complexJupiterBG.png": "complexJupiterBGLight.png",
-  "arrowDoodleBlack.png": "arrowDoodleLight.png",
-  "spark.png": "sparkLight.png",
-  "starBlack.png": "starLight.png",
-  "rocket.png": "rocketLight.png",
-  "earth.png": "earthLight.png",
-  "blackHole.png": "blackHoleLight.png",
+  "arrowDoodleBlack.webp": "arrowDoodleLight.webp",
+  "blackHole.webp": "blackHoleLight.webp",
+  "complexJupiterBG.webp": "complexJupiterBGLight.webp",
+  "coordinateBlack.webp": "coordinateLight.webp",
+  "disco.webp": "discoLight.webp",
+  "earth.webp": "earthLight.webp",
+  "gallery.webp": "galleryLight.webp",
+  "rocket.webp": "rocketLight.webp",
+  "spark.webp": "sparkLight.webp",
+  "starBlack.webp": "starLight.webp",
+  "starsBlack.webp": "starsLight.webp",
 };
 const DARK_MODE_IMAGES = Object.fromEntries(
   Object.entries(LIGHT_MODE_IMAGES).map(([dark, light]) => [light, dark]),
