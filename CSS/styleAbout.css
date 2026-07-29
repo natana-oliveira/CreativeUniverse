@@ -79,7 +79,7 @@ body.page-about #navbar {
 .about-me__message-text {
   width: 7.0625rem;
   font-family: var(--font-family-handwritten);
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   line-height: var(--leading-snug);
   color: var(--gold);
   opacity: 55%;

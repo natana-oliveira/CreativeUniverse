@@ -330,7 +330,7 @@
 .black-hole-message__text {
   margin: 0;
   font-family: var(--font-family-handwritten);
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   line-height: var(--leading-normal);
   color: var(--gold);
   opacity: 55%;
@@ -576,7 +576,7 @@
 }
 .cv-message__link {
   font-family: var(--font-family-handwritten);
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   line-height: var(--leading-normal);
   color: var(--gold);
   opacity: 55%;
